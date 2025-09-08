@@ -6,7 +6,7 @@ import axios from "axios";
 export const fetchPhotos = createAsyncThunk(
     "photos/fetchPhotos",
     async ({ category, page }) => {
-        const response = await axios.get("http://localhost:3000/api/photos", {
+        const response = await axios.get("http://localhost:5000/api/photos", {
             params: { category, page },
         });
         console.log("Fetched photos:", response.data);
